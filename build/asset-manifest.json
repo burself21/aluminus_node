@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f69b40ff.chunk.css",
+    "main.js": "/static/js/main.fcb6d785.chunk.js",
+    "main.js.map": "/static/js/main.fcb6d785.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fd7ec9fe.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fd7ec9fe.js.map",
+    "static/js/2.f0037d01.chunk.js": "/static/js/2.f0037d01.chunk.js",
+    "static/js/2.f0037d01.chunk.js.map": "/static/js/2.f0037d01.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.f69b40ff.chunk.css.map": "/static/css/main.f69b40ff.chunk.css.map",
+    "static/js/2.f0037d01.chunk.js.LICENSE.txt": "/static/js/2.f0037d01.chunk.js.LICENSE.txt",
+    "static/media/arrow.99464f50.svg": "/static/media/arrow.99464f50.svg",
+    "static/media/funding.6f5c64ae.svg": "/static/media/funding.6f5c64ae.svg",
+    "static/media/graphic.2c6109a3.svg": "/static/media/graphic.2c6109a3.svg",
+    "static/media/icon.2302cfed.svg": "/static/media/icon.2302cfed.svg",
+    "static/media/message.b560eaaf.svg": "/static/media/message.b560eaaf.svg",
+    "static/media/student.1ccbb560.svg": "/static/media/student.1ccbb560.svg",
+    "static/media/students_img.7f4d778f.svg": "/static/media/students_img.7f4d778f.svg",
+    "static/media/updated.55f1daa2.svg": "/static/media/updated.55f1daa2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd7ec9fe.js",
+    "static/js/2.f0037d01.chunk.js",
+    "static/css/main.f69b40ff.chunk.css",
+    "static/js/main.fcb6d785.chunk.js"
+  ]
+}
