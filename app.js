@@ -33,9 +33,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
 app.use(express.static(path.join(__dirname, 'build')));
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-})
 
 
 // catch 404 and forward to error handler
@@ -48,6 +45,9 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
     { useNewUrlParser: true, useUnifiedTopology: true },
     () => {
         console.log("Connected to DB");
+        app.get('/*', (req, res) => {
+          res.sendFile(path.join(__dirname, 'build', 'index.html'));
+        })
     });
 
 // Connection handling
