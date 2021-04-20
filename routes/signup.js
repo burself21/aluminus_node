@@ -36,6 +36,7 @@ router.post('/', (req, res) => {
     .then(() => {
       res.send({
         ...req.body,
+        success: true
       });
     }).catch(err => {
       if (err) {
