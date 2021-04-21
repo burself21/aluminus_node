@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({mergeParams: true});
 
-const User = require('../models/User');
+const User = require('../../models/User');
 
 /* Handle login info posted from form */
 router.post('/', (req, res) => {

@@ -13,9 +13,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require("cors");   // cross-origin resource sharing
 
+
+
+// Connect to DB
+
 // require routers
-const signupRouter = require('./routes/signup');
-const loginRouter = require('./routes/login');
+const apiRouter = require('./routes/api');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,24 +33,26 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // use routes
-app.use('/signup', signupRouter);
-app.use('/login', loginRouter);
-app.use(express.static(path.join(__dirname, 'build')));
+app.use('/api', apiRouter);     // api
+app.use('/static', express.static(path.join(__dirname, './build/static')));
+app.get('/*', (req, res) => {
+  res.sendFile('index.html', {root: path.join(__dirname, './build/')} );
+});
+//app.use('/react', reactRouter);  // api 
+//app.use(express.static(path.join(__dirname, 'build')));
+
 
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
-  next(createError(404));
-});
+// app.use((req, res, next) => {
+//   next(createError(404));
+// });
 
-// Connect to DB
 mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@aluminus.t8urj.mongodb.net/Aluminus?retryWrites=true&writeConcern=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true },
     () => {
         console.log("Connected to DB");
-        app.get('/*', (req, res) => {
-          res.sendFile(path.join(__dirname, 'build', 'index.html'));
-        })
+
     });
 
 // Connection handling
